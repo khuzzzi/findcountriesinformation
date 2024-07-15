@@ -1,0 +1,83 @@
+
+.cardcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3.6vw;
+    padding: 0vh 3.5vw;
+}
+
+.card {
+    height: 45vh;
+    width: 17vw;
+    background-color: white;
+    margin-left: 1vw;
+    margin-top: 3vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.2);
+}
+
+.img {
+    height: 80%; /* Make image height 100% of the parent container */
+    width: 100%; /* Make image width 100% of the parent container */
+    object-fit: cover; /* Maintain aspect ratio while covering the container */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+h3 {
+    font-weight: 800;
+    font-size: 1.1vw;
+    margin-bottom: 0.5vh; /* Adjust the margin bottom for spacing */
+}
+
+.lowersection {
+    margin-left: 1.2vw;
+    display: flex;
+    padding: 2vh 1vw;
+    flex-direction: column;
+}
+
+.countryname {
+    margin-top: -5vh;
+    font-weight: bold; /* Make country name bold */
+}
+
+.lowersection p {
+    font-size: 1vw;
+    margin-top: 0.8vh; /* Adjust the top margin for spacing between paragraphs */
+    font-weight: 300; /* Lighter font weight for paragraphs */
+}
+
+.lowersection span {
+    margin-top: 0.8vh; /* Adjust the top margin for spacing between paragraphs */
+    font-weight: bold; /* Make span text bold */
+}
+
+@media screen and (max-width : 650px) {
+    .cardcontainer {
+        display: flex;
+        flex-direction: column;
+    }
+    .card{
+        width: 100%;
+        height: 65vh;
+    }
+    h3{
+        font-size: 8.2vw;
+        justify-content: unset;
+        margin-top: -10vh;
+    }
+    .lowersection p{
+        font-size: 5vw;
+    }
+}

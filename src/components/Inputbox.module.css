@@ -1,0 +1,177 @@
+html, body {
+    background-color: hsl(0, 0%, 98%);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: auto;
+    width: 100%;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw;
+    box-sizing: border-box;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 60%;
+}
+
+.inputarea {
+    padding: 1.9vh 5vw;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.inputarea:focus {
+    outline: .2px solid rgb(36, 36, 36);
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 1.5em; /* Adjusted to fit better on smaller screens */
+    transform: translateY(-50%);
+    color: #b0b0b0;
+    font-size: 1.5em;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+.dropdownmenu {
+    height: 6vh;
+    width: 100%;
+    max-width: 200px;
+    border-radius: 4px;
+    margin-top: 2vh;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdownmenu p {
+    font-size: 1em;
+    padding: 1.8vh 1vw;
+    color: rgb(21, 21, 21);
+    margin: 0;
+}
+
+.icondropdown {
+    margin-right: 1.2vw;
+    font-size: 1.5em;
+}
+
+.dropdownitemscontainer {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.3vh;
+}
+
+.dropdownitemscontainer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.dropdownitemscontainer li {
+    padding: 1vh 1vw;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdownitemscontainer li:last-child {
+    border-bottom: none;
+}
+
+.dropdownitemscontainer li:hover {
+    background-color: hsl(0, 0%, 90%);
+}
+
+/* Show dropdown items when upicon is true */
+.dropdownmenu:hover .dropdownitemscontainer,
+.dropdownmenu .dropdownitemscontainer {
+    display: flex;
+}
+
+@media screen and (max-width: 650px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .left {
+        width: 100%;
+        margin-bottom: 2vh;
+    }
+
+    .inputarea {
+        width: 100%;
+        padding: 2.8vh 18vw;
+        max-width: 100%;
+    }
+
+    .icon {
+        font-size: 1.2em; /* Adjusted font size for smaller screens */
+        left: 2em; /* Adjusted position for better fit */
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .dropdownmenu {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 0;
+        height: 8vh;
+        padding: 0vh 3vw;
+    }
+
+    .dropdownmenu p {
+        font-size: 1em;
+    }
+
+    .icondropdown {
+        font-size: 2.2em; /* Adjusted font size for smaller screens */
+        margin-right: 1em;
+    }
+
+    .dropdownitemscontainer li {
+        padding: 0.8vh 1vw;
+    }
+}
